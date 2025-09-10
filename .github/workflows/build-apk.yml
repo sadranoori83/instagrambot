@@ -25,6 +25,10 @@ jobs:
           pip install --upgrade pip
           pip install buildozer cython
 
+      - name: Install Android SDK and Tools
+        run: |
+          sudo apt install -y android-sdk android-sdk-platform-tools
+
       - name: Build APK with Buildozer
         run: |
           buildozer android debug
